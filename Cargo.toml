@@ -1,0 +1,7 @@
+[workspace]
+members = [ 
+	"./*",
+	"hello-wasi/wasi",
+	"wasi-async/wasi"
+]
+exclude = [".git", "target"]
