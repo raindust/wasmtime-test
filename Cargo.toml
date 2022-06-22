@@ -2,6 +2,7 @@
 members = [ 
 	"./*",
 	"hello-wasi/wasi",
-	"wasi-async/wasi"
+	"wasi-async/wasi",
+	"lib-hello/lib-hello-example"
 ]
 exclude = [".git", "target"]
