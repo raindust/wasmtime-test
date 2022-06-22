@@ -384,6 +384,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "custom-state"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "wasmtime",
+ "wasmtime-wasi",
+]
+
+[[package]]
 name = "digest"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
