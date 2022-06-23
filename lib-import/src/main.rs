@@ -13,8 +13,13 @@ fn main() -> anyhow::Result<()> {
         println!("passing key in host is: {}", param);
         Ok(())
     });
+    let host_call = Func::wrap(&mut store, |caller: Caller<'_, u8>| {
+        println!("my host state is: {}", caller.data());
+        println!("this is a host call");
+        Ok(())
+    });
 
-    let instance = Instance::new(&mut store, &module, &[passing_key.into()])?;
+    let instance = Instance::new(&mut store, &module, &[passing_key.into(), host_call.into()])?;
 
     let guest_call = instance
         .get_export(&mut store, "__guest_call")
