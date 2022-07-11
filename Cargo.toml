@@ -6,5 +6,6 @@ members = [
 	"lib-hello/lib-hello-example",
 	"lib-import/lib-import-example",
 	"lib-import-wasi/lib-import-wasi-example",
+	"wasi-with-wbindgen/wasi-with-wbindgen-example",
 ]
 exclude = [".git", "target"]
